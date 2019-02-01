@@ -11,8 +11,6 @@
 |
 */
 
-
-
 Route::middleware(['web', 'localized'])
     ->prefix(request()->segment(1))
     ->group(function () {
@@ -33,6 +31,6 @@ Route::middleware(['web', 'localized'])
 
 Route::name('locale.switch')->get('switch/{locale}', 'Front\HomeController@local_switch');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'myadmin'], function () {
     Voyager::routes();
 });

@@ -1,0 +1,51 @@
+		.social-pad{
+			padding-top:5px;
+		}
+		.padd-bottom{
+			padding-bottom:30px;
+		}
+		
+		.language-selector{
+			display: inline;
+		    float: left;
+		    padding-right: 30px;
+		    margin-top: -5px;
+		}
+		
+		.language-selector .dropdown-menu{
+			min-width:100px;
+			right:auto;
+		}
+		
+		@media only screen and (max-width: 750px) and (min-width: 0){
+			.language-selector{
+				display: inline;
+			    float:none;
+
+			}
+			
+			.list-info{
+				padding-top:10px;
+			}
+			
+
+			.language-selector .dropdown-menu{
+				margin-top:10px;
+			}
+		}
+		
+		@media only screen and (max-width: 991px) and (min-width: 0){
+		    .page-wrapper {
+		    	padding-top:55px;
+		    }
+		    
+			
+		}
+		.slicknav_menu {
+		    background: #4C4C4C!important;
+		}
+
+		.flag{
+			height:12px;
+		}
+		

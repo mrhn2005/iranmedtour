@@ -9,11 +9,23 @@
 	<meta name="keywords" content="medical, doctor, health">
 	<meta name="author" content="YokoTheme">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
+	
+	<!-- Crisp -->
+	<!--<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="b9a5fe60-cb04-4598-872e-838b0e7a4a9a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>-->
+	
 	<!-- Title -->
 	<title>
 	    @yield('title')
 	</title>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111472260-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-111472260-4');
+    </script>
 	<!-- Apple Touch Icons -->
 	<link href="images/apple-touch-icon.png" rel="apple-touch-icon">
 	<link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
@@ -32,7 +44,7 @@
 	<link rel="stylesheet" href="/css/jquery.bxslider.css">
 	<link rel="stylesheet" href="/css/hover.css">
 	<link rel="stylesheet" href="/css/magnific-popup.css">
-	<link rel="stylesheet" href="/css/color-switcher.css">
+	<!--<link rel="stylesheet" href="/css/color-switcher.css">-->
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/responsive.css">
 	<link rel="stylesheet" href="/css/toastr.min.css">
@@ -40,63 +52,11 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css" type="text/css" />
 		<link rel="stylesheet" href="/css/rtl.css?t={{time()}}"/>
 	@endif
-	<script src="/js/modernizr.min.js"></script>
-	<style>
-		.social-pad{
-			padding-top:5px;
-		}
-		.padd-bottom{
-			padding-bottom:30px;
-		}
-		
-		.language-selector{
-			display: inline;
-		    float: left;
-		    padding-right: 30px;
-		    margin-top: -5px;
-		}
-		
-		.language-selector .dropdown-menu{
-			min-width:100px;
-			right:auto;
-		}
-		
-		@media only screen and (max-width: 750px) and (min-width: 0){
-			.language-selector{
-				display: inline;
-			    float:none;
-
-			}
-			
-			.list-info{
-				padding-top:10px;
-			}
-			
-
-			.language-selector .dropdown-menu{
-				margin-top:10px;
-			}
-		}
-		
-		@media only screen and (max-width: 991px) and (min-width: 0){
-		    .page-wrapper {
-		    	padding-top:55px;
-		    }
-		    
-			
-		}
-		.slicknav_menu {
-		    background: #4C4C4C!important;
-		}
-
-		.flag{
-			height:12px;
-		}
-		
-		
-		
-	</style>
+	<link rel="stylesheet" href="/css/custom.css?t={{time()}}"/>
+	<!--<script src="/js/modernizr.min.js"></script>-->
+    
     @yield('style')
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -125,7 +85,7 @@
 	<script src="/js/jquery.bxslider.min.js"></script>
 	<script src="/js/jquery.mixitup.min.js"></script>
 	<script src="/js/jquery.magnific-popup.min.js"></script>
-	<script src="/js/color-switcher.js"></script>
+	<!--<script src="/js/color-switcher.js"></script>-->
 	<script src="/js/toastr.min.js"></script>
 	@if(Helper::isRtl())
 	<script src="/js/custom-rtl.js"></script>

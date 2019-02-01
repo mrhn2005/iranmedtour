@@ -20,10 +20,10 @@
 				    </ul>
 				</div>
 				<div class="list list-info">
-					<i class="fa fa-envelope"></i> <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+					<i class="fa fa-envelope"></i> <a href="mailto:info@yourdomain.com">{{setting('site.email')}}</a>
 				</div>
 				<div class="list">
-					<i class="fa fa-phone"></i> 123 456 7890
+					<i class="fa fa-phone"></i> {{setting('site.phone')}}
 				</div>
 			</div>
 			
