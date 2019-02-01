@@ -47,7 +47,7 @@ class Category extends Model
     
     public function link($absolute = false)
     {
-        return route('category.show',[$this->id,$this->slug]);
+        return route('category.show',[$this->id,$this->getTranslatedAttribute('slug')]);
     }
     
 }

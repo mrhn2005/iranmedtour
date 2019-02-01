@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use TCG\Voyager\Facades\Voyager;
 use View;
 use App\Traits\Language;
+use App\Helpers\Helper;
 // use Webpatser\Uuid\Uuid;
 use Illuminate\Support\Facades\Cache;
 
@@ -29,7 +30,10 @@ class HomeController extends Controller
     
     public function __construct() {
        
-       View::share ( ['socials'=>Social::withTranslations(App::getLocale())->get()] );
+       View::share ([
+           'socials'=>Social::withTranslations(App::getLocale())->get(),
+           'is_rtl'=>Helper::isRtl()
+           ]);
     }
     
    
@@ -47,8 +51,11 @@ class HomeController extends Controller
     
     public function pages_show($slug){
         $page=Page::where('slug',$slug)->firstOrFail();
-        
-        return view('front.pages.'.$slug.'.index',compact('page'));
+        if (view()->exists('front.pages.'.$slug.'.index')) {
+            return view('front.pages.'.$slug.'.index',compact('page'));
+        } else {
+            return view('front.pages.page.index',compact('page'));
+        }
     }
     
     

@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'kufi';
+    src: url('../fonts/DroidKufi-Regular.woff');
+    
+}
+
+body{
+    font-family: kufi !important;
+}
+.sf-menu .menu-title , .banner-text h1 {
+
+    font-family: kufi !important;
+}
 .bx-wrapper .bx-viewport{ direction: ltr; }
 
 .sf-menu li li a {
@@ -50,4 +63,21 @@
 
 .dropdown-menu{
     left:0px;
+}
+
+.department-tab .nav-tabs a{
+    padding-right: 15px;
+    text-align:right;
+}
+
+.department-tab .nav-tabs span{
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 800px)
+{
+    .department-tab .col-md-4 {
+        padding-left: 15px;
+        
+    }
 }

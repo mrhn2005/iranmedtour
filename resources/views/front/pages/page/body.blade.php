@@ -10,20 +10,20 @@
 								<div class="col-md-12">
 									
 
-									<!-- category Item Start -->
+									<!-- page Item Start -->
 									<div class="post-item">
-										<!--<div class="image-holder">-->
-										<!--	<img class="img-responsive" src="" alt="" >-->
+										<div class="image-holder">
+											<img class="img-responsive" src="{{Voyager::image($page->image)}}" alt="{{$page->getTranslatedAttribute('title')}}" >
 											
-										<!--</div>-->
+										</div>
 										<div class="text">
-											<h3><a href="blog-single-sidebar-no.html">{{ $category->getTranslatedAttribute('title') }}</a></h3>
+											<h3><a href="blog-single-sidebar-no.html">{{ $page->getTranslatedAttribute('title') }}</a></h3>
 											
-											{!! $category->getTranslatedAttribute('body') !!}
+											{!! $page->getTranslatedAttribute('body') !!}
 											
 										</div>
 									</div>
-									<!-- category Item End -->
+									<!-- page Item End -->
 
 								</div>
 

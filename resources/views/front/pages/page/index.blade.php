@@ -1,7 +1,7 @@
 @extends('front.layout.front')
 
 @section('title')
-{{setting(App::getLocale().'.title')}} | {{ $category->getTranslatedAttribute('title') }}
+{{setting(App::getLocale().'.title')}} | {{ $page->getTranslatedAttribute('title') }}
 @endsection
 
 
@@ -29,13 +29,13 @@
 		
 		
 			<!-- Banner Start -->
-		<div class="page-banner" style="background:url({{isset($category->image)?Voyager::image($category->image):'/images/about.jpg'}}) no-repeat;background-size: 100%;">
+		<div class="page-banner">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="banner-text">
-							<h1>{{ $category->getTranslatedAttribute('title') }}</h1>
+							<h1>{{ $page->getTranslatedAttribute('title') }}</h1>
 							<!--<ul>-->
 							<!--	<li><a href="home-layout-1.html">Home</a></li>-->
 							<!--	<li><i class="fa fa-angle-right"></i></li>-->
@@ -50,12 +50,9 @@
 		
 		
 		<!-- Blog Start -->
-            @include('front.service.includes.body')
+            @include('front.pages.page.body')
 		<!-- Blog End -->
-        
-        <!-- form start -->
-        @include('front.service.includes.form')
-        <!--end form -->
+
 
 		<!-- Footer Social Start -->
 			@include('front.common.footer')

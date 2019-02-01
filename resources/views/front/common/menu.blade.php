@@ -1,8 +1,8 @@
 
 @php
 	if(!isset($innerLoop)){
-		if(Helper::isRtl()){
-			$items=$items->sortByDesc('id');
+		if($is_rtl){
+			$items=$items->reverse();
 		}
 		echo '<ul class="sf-menu">';
 	}else{
@@ -53,9 +53,9 @@
         }
        
     @endphp
-    
+
 	<li>
-		<a href="{{$item->link()}}">
+		<a href="{{$item->link()}}" style="font-size:{{setting('site.menu_font')}}px">
 			@if(!isset($innerLoop))
 			<span class="menu-description">
 				<i class="{{ $item->icon_class }}"></i>

@@ -48,7 +48,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/responsive.css">
 	<link rel="stylesheet" href="/css/toastr.min.css">
-	@if(Helper::isRtl())
+	@if($is_rtl)
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css" type="text/css" />
 		<link rel="stylesheet" href="/css/rtl.css?t={{time()}}"/>
 	@endif
