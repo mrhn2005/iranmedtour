@@ -13,66 +13,13 @@
 					<div class="col-md-12">
 							
 						<div class="partner-carousel">
+						    @foreach($partners as $partner)
 							<div class="item wow fadeInUp">
 								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/1.png" alt=""></a>
+									<a href="{{$partner->link}}" target="_blank"><img src="{{Voyager::image($partner->image)}}" alt="{{$partner->title}}"  ></a>
 								</div>
 							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/2.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/3.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/4.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/5.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/1.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/2.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/3.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/4.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/5.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/1.png" alt=""></a>
-								</div>
-							</div>
-							<div class="item wow fadeInUp">
-								<div class="inner">
-									<a href="home-layout-1.html#"><img src="images/partner/2.png" alt=""></a>
-								</div>
-							</div>
+							@endforeach
 						</div>
 
 					</div>

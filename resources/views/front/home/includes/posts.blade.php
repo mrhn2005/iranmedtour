@@ -26,7 +26,7 @@
 									</div>
 								</div>
 								<div class="text">
-									<h3><a href="home-layout-1.html">News Title Here</a></h3>
+									<h3><a href="{{route('blog.show',[$post->id,$post->getTranslatedAttribute('slug')])}}">{{$post->getTranslatedAttribute('title')}}</a></h3>
 									<!--<h4><i class="fa fa-comments-o" aria-hidden="true"></i> 24 Comments</h4>-->
 									<p class="excerp-height">
 										{{$post->getTranslatedAttribute('excerpt')}}

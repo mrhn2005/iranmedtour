@@ -53,9 +53,7 @@ header .logo img {
     max-height: 50px;
     margin: 24px 0 10px;
 }
-header .logo{
-text-align: left;
-}
+
 .service-v1 .item {
     min-height: 120px;
 }
@@ -63,10 +61,8 @@ text-align: left;
 	color:#656464;
 }
 
-.page-banner{
-	padding-top:320px;
+.sticky{
+    background-color: rgba(255,255,255,0.8);
 }
 
-.banner-text {
- margin-top:-130px;
-}
+

@@ -81,3 +81,38 @@ body{
         
     }
 }
+
+
+.banner-direction{
+    direction:rtl;
+}
+
+.footer-col h3:after {
+    right:0;
+    
+}
+
+
+.footer-col ul li:before {
+    content: "\f0d9";
+    right: 0;
+    position: absolute;
+    top: 0;
+    left: auto;
+}
+
+.footer-col ul li a {
+     padding-right:10px;
+}
+
+.footer-col .contact-item .text {
+    padding-right: 10px;
+    float: right;
+}
+   
+.footer-col .contact-item .icon {
+    float: right;
+}
+
+
+

@@ -17,6 +17,8 @@ use TCG\Voyager\Models\Page as Page;
 use TCG\Voyager\Models\Post as Post;
 
 use App\Models\Social;
+use App\Models\Partner;
+use App\Models\Link;
 use App\Models\Benefit;
 use App\Models\Banner;
 use App\Models\Request as Req;
@@ -29,23 +31,27 @@ class HomeController extends Controller
     private $cache_minutes=1;
     
     public function __construct() {
-       
+       $latest_posts=Post::withTranslations(App::getLocale())->orderBy('created_at','desc')->limit(2)->get();
+       $links=Link::all();
        View::share ([
            'socials'=>Social::withTranslations(App::getLocale())->get(),
-           'is_rtl'=>Helper::isRtl()
+           'is_rtl'=>Helper::isRtl(),
+           'latest_posts'=>$latest_posts,
+           'links'=>$links
            ]);
     }
     
    
     public function home_page(){
         $benefits=Benefit::withTranslations(App::getLocale())->get();
-        $posts=Post::withTranslations(App::getLocale())->limit($this->post_per_home)->get();
+        $posts=Post::withTranslations(App::getLocale())->orderBy('created_at','desc')->limit($this->post_per_home)->get();
         $banners=Banner::withTranslations(App::getLocale())->limit($this->banner_per_home)->get();
+        $partners=Partner::all();
         $department = Cache::remember('categories'.App::getLocale(), $this->cache_minutes, function (){
             $categories=Category::with('children')->withTranslations(App::getLocale())->get();
             return view('front.home.includes.department',compact(['categories']))->render();
         });
-        return view('front.home.home',compact(['benefits','posts','banners','department']));
+        return view('front.home.home',compact(['benefits','posts','banners','department','partners']));
     }
     
     

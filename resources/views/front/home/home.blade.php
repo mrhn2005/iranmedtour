@@ -23,7 +23,20 @@
     }
     
     .excerp-height{
-        min-height:140px;
+        min-height:120px;
+    }
+    .blog .text {
+        min-height: 250px;
+    }
+    .blog h3 {
+        min-height:50px;
+    }
+    .page-banner{
+	    padding-top:320px;
+    }
+    
+    .banner-text {
+        margin-top:-130px;
     }
 </style>
 @endsection

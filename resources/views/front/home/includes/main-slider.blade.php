@@ -6,8 +6,10 @@
 				<div class="overlay"></div>
 				<div class="content">
 					<div class="inner {{$banner->text_pos()}}">
-						<h2>
-							{{$banner->getTranslatedAttribute('title')}}
+					    
+						<h2 class="banner-direction">
+						    
+							{!! $banner->getTranslatedAttribute('title') !!}
 						</h2>
 						<h3>
 							{{$banner->getTranslatedAttribute('subtitle')}}
