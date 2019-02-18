@@ -12,11 +12,13 @@ use App\Helpers\Helper;
 // use Webpatser\Uuid\Uuid;
 use Illuminate\Support\Facades\Cache;
 
-use TCG\Voyager\Models\Category as Category;
+
 use TCG\Voyager\Models\Page as Page;
 use TCG\Voyager\Models\Post as Post;
 
+use App\Models\Category;
 use App\Models\Social;
+use App\Models\Doctor;
 use App\Models\Partner;
 use App\Models\Link;
 use App\Models\Benefit;
@@ -73,6 +75,20 @@ class HomeController extends Controller
         return view('front.blog.show',compact('post'));
     }
     
+    
+    public function doctor_index(){
+        $doctors=Doctor::with(['networks','categories'])->withTranslations(App::getLocale())->orderBy('order')->paginate($this->per_page);
+        $categories= Category::withCount('doctors')->withTranslations()->get();
+        return view('front.doctor.index',compact(['doctors','categories']));
+    }
+    public function doctor_show(Doctor $doctor,$slug=''){
+        return view('front.doctor.show',compact(['doctor']));
+    }
+    public function doctor_category_index(Category $category, $slug=''){
+        $doctors=$category->doctors;
+        $categories= Category::withCount('doctors')->withTranslations()->get();
+        return view('front.doctor.index',compact(['doctors','categories']));
+    }
     
     public function category_show(Category $category, $slug){
         return view('front.service.index',compact('category'));

@@ -29,7 +29,7 @@
 		
 		
 			<!-- Banner Start -->
-		<div class="page-banner">
+		<div class="page-banner" style="background:url({{isset($post->image)?Voyager::image($post->image):'/images/about.jpg'}}) no-repeat;background-size: cover;">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">

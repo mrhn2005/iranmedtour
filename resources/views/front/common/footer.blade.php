@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-md-3 col-lg-3 footer-col">
-						<h3>About HealthCube</h3>
+						<h3>{{__('home.about')}}</h3>
 						<p>
 							{{setting(App::getLocale().'.about')}}
 						</p>
@@ -47,23 +47,7 @@
 						</div>						
 					</div>
 					<div class="col-sm-6 col-md-3 col-lg-3 footer-col">
-						<h3>Contact Us</h3>
-						<div class="contact-item">
-							<div class="icon"><i class="fa fa-map-marker"></i></div>
-							<div class="text">{{setting(App::getLocale().'.address')}}</div>
-						</div>
-						<div class="contact-item">
-							<div class="icon"><i class="fa fa-phone"></i></div>
-							<div class="text">{{setting('site.phone')}}</div>
-						</div>
-						<!--<div class="contact-item">-->
-						<!--	<div class="icon"><i class="fa fa-fax"></i></div>-->
-						<!--	<div class="text"></div>-->
-						<!--</div>-->
-						<div class="contact-item">
-							<div class="icon"><i class="fa fa-envelope-o"></i></div>
-							<div class="text">{{setting('site.email')}}</div>
-						</div>
+						@include('front.common.contact')
 					</div>
 				</div>
 			</div>

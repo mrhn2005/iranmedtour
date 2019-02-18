@@ -57,27 +57,7 @@
 						
 					</div>
 					<div class="col-md-4 wow fadeInRight">
-						<h2>Openning Hours</h2>
-						<p>
-							<table class="table table-striped table-bordered">
-								<tr>
-									<td>Monday - Thursday</td>
-									<td>9.00 - 20.00</td>
-								</tr>
-								<tr>
-									<td>Friday</td>
-									<td>9.00 - 16.00</td>
-								</tr>
-								<tr>
-									<td>Saturday</td>
-									<td>9.00 - 14.00</td>
-								</tr>
-								<tr>
-									<td>Sunday</td>
-									<td>Closed</td>
-								</tr>
-							</table>
-						</p>
+                        @include('front.common.contact')
 					</div>
 				</div>
 			</div>

@@ -12,10 +12,7 @@
 
 									<!-- Post Item Start -->
 									<div class="post-item">
-										<div class="image-holder">
-											<img class="img-responsive" src="{{Voyager::image($post->image)}}" alt="{{$post->getTranslatedAttribute('title')}}" >
-											@include('front.blog.includes.date')
-										</div>
+										
 										<div class="text">
 											<h3><a href="blog-single-sidebar-no.html">{{ $post->getTranslatedAttribute('title') }}</a></h3>
 											<ul class="status">

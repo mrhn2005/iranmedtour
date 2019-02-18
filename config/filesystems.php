@@ -1,5 +1,5 @@
 <?php
-
+// dd(public_path('storage'));
 return [
 
     /*
@@ -40,7 +40,7 @@ return [
     | Supported Drivers: "local", "ftp", "sftp", "s3", "rackspace"
     |
     */
-
+    
     'disks' => [
 
         'local' => [
@@ -50,7 +50,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' =>  '/home/medtouri/public_html/storage',
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

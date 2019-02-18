@@ -23,6 +23,10 @@ Route::middleware(['web', 'localized'])
     Route::get('/blog/{post}/{slug}','Front\HomeController@blog_show')->name('blog.show');
     Route::get('/blog','Front\HomeController@blog_index')->name('blog.index');
     
+    Route::get('/doctor','Front\HomeController@doctor_index')->name('doctor.index');
+    Route::get('/doctor/{doctor}/{slug?}','Front\HomeController@doctor_show')->name('doctor.show');
+    Route::get('/service/{category}/{slug?}/doctor','Front\HomeController@doctor_category_index')->name('doctor.category.show');
+    
     Route::get('/service/{category}/{slug}','Front\HomeController@category_show')->name('category.show');
     Route::post('/service/request/store','Front\HomeController@category_request')->name('category.request');
     
